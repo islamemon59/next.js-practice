@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
@@ -5,7 +6,10 @@ const Navbar = () => {
     <div>
       <nav className="w-full py-6 bg-blue-400">
         <ul className="flex justify-center gap-6 items-center font-bold text-white">
-          <li>Home</li>
+          <Link>
+            <li>Home</li>
+          </Link>
+
           <li>About</li>
           <li>Contact</li>
           <li>Services</li>
