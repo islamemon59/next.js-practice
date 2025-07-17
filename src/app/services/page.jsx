@@ -57,10 +57,10 @@ const Services = () => {
         Address
       </button>
 
-      <div>
+      <div className=" grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
         {data.map((d) => {
           return (
-            <div key={d.id} className="space-y-4">
+            <div key={d.id}>
               <p>{d.name}</p>
               <Link href={`/services/${d.id}`}>
                 <img src={d.image} alt="" />
