@@ -6,13 +6,18 @@ const Navbar = () => {
     <div>
       <nav className="w-full py-6 bg-blue-400">
         <ul className="flex justify-center gap-6 items-center font-bold text-white">
-          <Link>
+          <Link href="/">
             <li>Home</li>
           </Link>
-
-          <li>About</li>
-          <li>Contact</li>
-          <li>Services</li>
+          <Link href="/about">
+            <li>About</li>
+          </Link>
+          <Link href="/contact">
+            <li>Contact</li>
+          </Link>
+          <Link href="/services">
+            <li>Services</li>
+          </Link>
         </ul>
       </nav>
     </div>
