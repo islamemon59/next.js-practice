@@ -1,3 +1,5 @@
+import NotFound404Page from "@/app/not-found";
+import { PageNotFoundError } from "next/dist/shared/lib/utils";
 import React from "react";
 
 const ServiceDetails = ({ params }) => {
@@ -31,15 +33,21 @@ const ServiceDetails = ({ params }) => {
     },
   ];
 
-  const singleData = data.find(d => d.id == id)
+  const singleData = data.find((d) => d.id == id);
 
-  return (
-    <div>
-      <p>ID: {id}</p>
-      <p>{singleData.name}</p>
-      <img src={singleData.image} alt="" />
-    </div>
-  );
+  if (singleData) {
+    return (
+      <div>
+        <p>ID: {id}</p>
+        <p>{singleData.name}</p>
+        <img src={singleData.image} alt="" />
+      </div>
+    );
+  } else {
+    return(
+      <NotFound404Page/>
+    )
+  }
 };
 
 export default ServiceDetails;
